@@ -1,0 +1,39 @@
+<p class="name">Ducks can swim and walk.</p>
+<p class="rgb">Ducks can swim and walk.</p>
+<p class="hsl">Ducks can swim and walk.</p>
+<button>DUCK</button>
+<!-- Probeer ook LAB / HBW / LCHG en OKLCH en display-p3 -->
+
+<style>
+    p {
+
+    }
+    .name {
+        color: olive;
+    }
+
+    .rgb {
+        color: rgb(128 128 0);
+    }
+
+    .hsl {
+        color: hsl(60, 100%, 25%);
+    }
+
+    button {
+        --h: 60;
+        --s: 100%;
+        --l: 25%;
+        --a: 1;
+        background-color: hsl(var(--h) var(--s) var(--l) / var(--a));
+        color: white;
+        padding: 12px;
+        border: none;
+
+        &:hover {
+            --l: 35%;
+        }
+    }
+
+
+</style>
