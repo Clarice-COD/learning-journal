@@ -1,0 +1,119 @@
+<section class="screen-size-title">
+    <div class="title-wrap">
+        <div class="shape" id="shape1" ></div>
+        <h1 class="title">
+            <span>BEHIND</span> 
+            <span class="title-middle-line-wrap">
+                <div class="shape" id="shape2"></div> 
+                <span>THE</span> 
+                <div class="shape" id="shape3"></div> 
+            </span>
+            <span>SCENES</span> 
+        </h1>
+    </div>
+</section>
+
+<style>
+
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+
+@font-face {
+    font-family: "Inter";
+    src: url('/assets/Inter/');
+  }
+
+    .screen-size-title {
+        display: flex;
+        align-items: center;  /* vertical center */
+        justify-content: center; /* horizontal center */
+        height: 100vh;
+        width: 100vw;
+    }
+
+    h1 {
+        font-size: 4rem;
+        text-align: center;
+        max-width: 16rem;
+        line-height: 4rem;
+
+        @media (min-width: 769px) {
+            font-size: 6rem;
+            max-width: 30rem;
+            line-height: 6rem;
+        }
+    }
+
+    /* placeholder */
+    .shape {
+        width: 4rem;
+        height: 4rem;
+
+        @media (min-width: 769px) {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    .title-middle-line-wrap {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .title-wrap {
+        position: relative;
+    }
+
+    #shape1 {
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        background-color: #EBA3FF;
+        clip-path: polygon(50% 0%, 65% 15%, 90% 10%, 85% 35%, 100% 50%, 85% 65%, 90% 90%, 65% 85%, 50% 100%, 35% 85%, 10% 90%, 15% 65%, 0% 50%, 15% 35%, 10% 10%, 35% 15%);
+        transition: 0.5s ease-in-out;
+        animation: size 2s infinite;
+    }
+
+    @keyframes size {
+  0% {
+    rotate: 360deg;
+    scale: 1;
+  }
+
+  50% {
+    rotate: 180deg;
+    scale: 0.3;
+  }
+
+  100% {
+    rotate: 0deg;
+    scale: 1;
+  }
+}
+
+    #shape2 {
+        background-color: #FF6B5B;
+        clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+        transition: 0.5s ease-in-out;
+        animation: loader 2.5s infinite;
+    }
+
+    @keyframes loader {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: y 90deg;
+    scale: 0.6;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  75% {
+    rotate: x 270deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
